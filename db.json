@@ -1,0 +1,53 @@
+{
+  "music": [
+    {
+      "id": 1, 
+      "artist": "KIMIKO",
+      "name": "XING",
+      "image": "https://f4.bcbits.com/img/a3509240382_10.jpg",
+      "likes": 5
+    },
+    {
+      "id": 2, 
+      "artist": "Kelz",
+      "name": "5am and I Can't Sleep",
+      "image": "https://f4.bcbits.com/img/a2357319437_10.jpg",
+      "likes": 3
+    },
+    {
+      "id": 3, 
+      "artist": "Musclecars",
+      "name": "Coloring Lessons Compilation No.1",
+      "image": "https://f4.bcbits.com/img/a2325418471_10.jpg",
+      "likes": 17
+    },
+    {
+      "id": 4,
+      "artist": "Musclecars",
+      "name": "Coloring Lessons Compilation No.2",
+      "image": "https://f4.bcbits.com/img/a2716856308_10.jpg",
+      "likes": 21
+    },
+    {
+      "id": 5,
+      "artist": "UMFANG",
+      "name": "RIVEN",
+      "image": "https://f4.bcbits.com/img/a2367777541_10.jpg",
+      "likes": 7
+    },
+    {
+      "id": 6,
+      "artist": "UMFANG",
+      "name": "Camber",
+      "image": "https://f4.bcbits.com/img/a3581289802_10.jpg",
+      "likes": 11
+    },
+    {
+      "id": 7,
+      "artist": "KIMIKO",
+      "name": "Stay // Like Hot Butterfly",
+      "image": "https://f4.bcbits.com/img/a3227087523_10.jpg",
+      "likes": 9
+    }
+  ]
+}

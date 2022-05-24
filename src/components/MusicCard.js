@@ -7,7 +7,7 @@ function MusicCard({ music }) {
   const styles = {
     img: {
       height: '210px',
-      width: '210px'
+      width: '205px'
     }
   }
 

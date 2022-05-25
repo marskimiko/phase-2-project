@@ -12,10 +12,19 @@ function MusicCard({ music, onUpdateMusic, handleDelete }) {
     },
     likeButton: {
       backgroundColor: 'white',
-      color: 'black'
+      color: 'black',
+      width: "40%",
+      marginLeft: "30%",
+      marginRight: "30%"
     }, 
     trashButton: {
-      backgroundColor: 'white'
+      backgroundColor: 'white',
+      width: "40%",
+      marginLeft: "30%",
+      marginRight: "30%"
+    },
+    center: {
+      textAlign: "center",
     }
   }
 
@@ -49,9 +58,9 @@ function MusicCard({ music, onUpdateMusic, handleDelete }) {
             style={styles.img} 
           />
         </div>
-        <h2>{name}</h2>
+        <h2 style={styles.center}>{name}</h2>
         <div className="content">
-          <div className="header">{artist}</div>
+          <div className="header" style={styles.center}>{artist}</div>
         </div>
         <div className="extra content">
           <Button 

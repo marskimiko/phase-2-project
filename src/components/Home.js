@@ -7,7 +7,14 @@ function Home({ musics, setMusic, onUpdateMusic }) {
   const match = useRouteMatch();
 
   const styles = {
-    
+    main: {
+      display: "flex",
+      flexDirection: "row",
+      flexWrap: "wrap",
+      justifyContent: "center",
+      alignItems: "center",
+      alignContent: "center"
+    }
   } 
 
   const handleDelete= (id) => {
@@ -40,7 +47,7 @@ function Home({ musics, setMusic, onUpdateMusic }) {
         <MusicDescription musics={musics} />
       </Route>
     </div>
-    <div id="music-collection">{renderMusicArray}</div>
+    <div id="music-collection" style={styles.main}>{renderMusicArray}</div>
     </>
   )
 }

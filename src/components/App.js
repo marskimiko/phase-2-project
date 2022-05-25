@@ -9,6 +9,12 @@ import Form from './Form';
 function App() {
   const [musics, setMusic] = useState([]);
 
+  const styles = {
+    body: {
+      backgroundColor: 'black'
+    }
+  }
+
   useEffect(() => {
     fetch("http://localhost:3004/music")
     .then(r => r.json())

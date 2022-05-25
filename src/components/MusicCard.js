@@ -58,9 +58,16 @@ function MusicCard({ music, onUpdateMusic, handleDelete }) {
             style={styles.img} 
           />
         </div>
-        <h2 style={styles.center}>{name}</h2>
+        <h2  
+          style={styles.center}
+          >{name}
+        </h2>
         <div className="content">
-          <div className="header" style={styles.center}>{artist}</div>
+          <div 
+            className="header" 
+            style={styles.center}
+            >{artist}
+          </div>
         </div>
         <div className="extra content">
           <Button 

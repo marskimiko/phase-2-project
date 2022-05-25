@@ -1,10 +1,8 @@
 import React from "react";
-import { Route, useRouteMatch } from "react-router-dom";
+import { Route } from "react-router-dom";
 import MusicCard from './MusicCard'
-import MusicDescription from "./MusicDescription"
 
 function Home({ musics, setMusic, onUpdateMusic }) {
-  const match = useRouteMatch();
 
   const styles = {
     main: {
@@ -38,15 +36,6 @@ function Home({ musics, setMusic, onUpdateMusic }) {
  
   return (
     <>
-    <div>
-    <Route exact path={match.url}>
-        <h3>Click album for description</h3>
-      </Route>
-      
-      <Route path={`${match.url}/:movieId`}>
-        <MusicDescription musics={musics} />
-      </Route>
-    </div>
     <div id="music-collection" style={styles.main}>{renderMusicArray}</div>
     </>
   )

@@ -1,21 +1,21 @@
 {
   "music": [
     {
-      "id": 1, 
+      "id": 1,
       "artist": "KIMIKO",
       "name": "XING",
       "image": "https://f4.bcbits.com/img/a3509240382_10.jpg",
       "likes": 5
     },
     {
-      "id": 2, 
+      "id": 2,
       "artist": "Kelz",
       "name": "5am and I Can't Sleep",
       "image": "https://f4.bcbits.com/img/a2357319437_10.jpg",
       "likes": 3
     },
     {
-      "id": 3, 
+      "id": 3,
       "artist": "Musclecars",
       "name": "Coloring Lessons Compilation No.1",
       "image": "https://f4.bcbits.com/img/a2325418471_10.jpg",

@@ -20,43 +20,43 @@ function Form({ musics, setMusic }) {
     .then(newMusic => setMusic([...musics, newMusic]));
   }
   return (
-    // <div className="container">
-    //   <form className="add-music-form" onSubmit={handleSubmit}>
-    //     <h3>Add Music!</h3>
-    //     <input
-    //       type="text"
-    //       name="name"
-    //       placeholder="Enter artist's name..."
-    //       className="input-text"
-    //       value={name}
-    //       onChange={e => setName(e.target.value)}
-    //     />
-    //     <br />
-    //     <input
-    //       type="text"
-    //       name="name"
-    //       placeholder="Enter album name..."
-    //       className="input-text"
-    //       value={album}
-    //       onChange={e => setAlbum(e.target.value)}
-    //     />
-    //     <br />
-    //     <input
-    //       type="text"
-    //       name="image"
-    //       placeholder="Enter album art image URL..."
-    //       className="input-text"
-    //       value={image}
-    //       onChange={e => setImage(e.target.value)}
-    //     />
-    //     <br />
-    //     <input
-    //       type="submit"
-    //       name="submit"
-    //       value="Add"
-    //       className="submit"
-    //     />
-    //   </form>
+    <div className="container">
+      <form className="add-music-form" onSubmit={handleSubmit}>
+        <h3>Add Music!</h3>
+        <input
+          type="text"
+          name="name"
+          placeholder="Enter artist's name..."
+          className="input-text"
+          value={name}
+          onChange={e => setName(e.target.value)}
+        />
+        <br />
+        <input
+          type="text"
+          name="name"
+          placeholder="Enter album name..."
+          className="input-text"
+          value={album}
+          onChange={e => setAlbum(e.target.value)}
+        />
+        <br />
+        <input
+          type="text"
+          name="image"
+          placeholder="Enter album art image URL..."
+          className="input-text"
+          value={image}
+          onChange={e => setImage(e.target.value)}
+        />
+        <br />
+        <input
+          type="submit"
+          name="submit"
+          value="Add"
+          className="submit"
+        />
+      </form>
     </div>
   )
 }

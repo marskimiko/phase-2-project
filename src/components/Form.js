@@ -5,6 +5,23 @@ function Form({ musics, setMusic }) {
   const [album, setAlbum] = useState("")
   const [image, setImage] = useState("")
 
+  const styles = {
+    img: {
+      height: '210px',
+      width: '210px',
+    },
+    form: { 
+      backgroundColor: 'pink',
+      maxWidth: "420px",
+      margin: "50px auto",
+      padding: "0px",
+      borderSize: "border box",
+      // display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }
+  }
+
   function handleSubmit(e) {
     e.preventDefault();
     const formData = { name, album, image};
@@ -21,7 +38,7 @@ function Form({ musics, setMusic }) {
   }
   return (
     <div className="container">
-      <form className="add-music-form" onSubmit={handleSubmit}>
+      <form className="add-music-form" onSubmit={handleSubmit} style={styles.form}>
         <h3>Add Music!</h3>
         <input
           type="text"

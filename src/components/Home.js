@@ -6,6 +6,10 @@ import MusicDescription from "./MusicDescription"
 function Home({ musics, setMusic, onUpdateMusic }) {
   const match = useRouteMatch();
 
+  const styles = {
+    
+  } 
+
   const handleDelete= (id) => {
     let updatedMusics = musics.filter(music => music.id !== id)
     setMusic(updatedMusics)

@@ -1,7 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import { Route, useRouteMatch } from "react-router-dom";
 import MusicCard from './MusicCard'
 
 function Home({ musics, setMusic, onUpdateMusic }) {
+  const match = useRouteMatch();
 
   const handleDelete= (id) => {
     let updatedMusics = musics.filter(music => music.id !== id)
@@ -23,7 +25,18 @@ function Home({ musics, setMusic, onUpdateMusic }) {
   
  
   return (
+    <>
     <div id="music-collection">{renderMusicArray}</div>
+    <div>
+    <Route exact path={match.url}>
+        <h3>Click album for description</h3>
+      </Route>
+      
+      <Route path={`${match.url}/:movieId`}>
+        <MusicDescription movics={musics} />
+      </Route>
+    </div>
+    </>
   )
 }
 

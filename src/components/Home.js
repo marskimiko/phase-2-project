@@ -1,6 +1,7 @@
 import React from "react";
 import { Route, useRouteMatch } from "react-router-dom";
 import MusicCard from './MusicCard'
+import MusicDescription from "./MusicDescription"
 
 function Home({ musics, setMusic, onUpdateMusic }) {
   const match = useRouteMatch();
@@ -26,16 +27,16 @@ function Home({ musics, setMusic, onUpdateMusic }) {
  
   return (
     <>
-    <div id="music-collection">{renderMusicArray}</div>
     <div>
     <Route exact path={match.url}>
         <h3>Click album for description</h3>
       </Route>
       
       <Route path={`${match.url}/:movieId`}>
-        <MusicDescription movics={musics} />
+        <MusicDescription musics={musics} />
       </Route>
     </div>
+    <div id="music-collection">{renderMusicArray}</div>
     </>
   )
 }

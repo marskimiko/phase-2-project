@@ -10,8 +10,8 @@ function App() {
   const [musics, setMusic] = useState([]);
 
   const styles = {
-    body: {
-      backgroundColor: 'black'
+    center: {
+      textAlign: "center"
     }
   }
 

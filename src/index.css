@@ -28,12 +28,12 @@ code {
   margin-right:30px;
   margin-bottom: 70px;
   background-color: black;
-  color: rgb(212, 209, 203);
+  color: rgb(255, 255, 255);
   line-height:2;
 }
 
 .topnav {
-  background-color: #333;
+  background-color: rgb(0, 0, 0);
   overflow: hidden;
 }
 
@@ -55,6 +55,50 @@ code {
 
 /* Add a color to the active/current link */
 .topnav a.active {
-  background-color: #04AA6D;
+  background-color: black;
   color: white;
+}
+
+.form-inline {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+/* Add some margins for each label */
+.form-inline label {
+  margin: 5px 10px 5px 0;
+}
+
+/* Style the input fields */
+.form-inline input {
+  vertical-align: middle;
+  margin: 5px 10px 5px 0;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+/* Style the submit button */
+.form-inline button {
+  padding: 10px 20px;
+  background-color: dodgerblue;
+  border: 1px solid #ddd;
+  color: white;
+}
+
+.form-inline button:hover {
+  background-color: royalblue;
+}
+
+/* Add responsiveness - display the form controls vertically instead of horizontally on screens that are less than 800px wide */
+@media (max-width: 800px) {
+  .form-inline input {
+    margin: 10px 0;
+  }
+
+  .form-inline {
+    flex-direction: column;
+    align-items: stretch;
+  }
 }

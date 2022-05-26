@@ -70,7 +70,7 @@ function Form({ onAddMusic, musics }) {
   return (
     <div>
         <h2 style={styles.form}>Add a New Song</h2>
-        <form onSubmit={handleSubmit} style={styles.form}>
+        <form class="form-inline"onSubmit={handleSubmit} style={styles.form}>
           <div>
             <label>Artist:</label>
             <input 

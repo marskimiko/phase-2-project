@@ -27,7 +27,6 @@ function App() {
       <Switch>
       <Route exact path="/add">
           <Form 
-            musics={musics}
             setMusic={setMusic} 
             onAddMusic={handleAddMusic}
           />
@@ -36,7 +35,7 @@ function App() {
           <About />
         </Route>
         <Route exact path="/:id/edit">
-          <Form />
+          <Form musics={musics}/>
         </Route>
         <Route exact path="/">
           <Home 

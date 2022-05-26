@@ -1,15 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom'
 
-function Form({ musics, setMusic, onAddMusic }) {
+function Form({ onAddMusic, musics }) {
   // const [name, setName] = useState("")
   // const [album, setAlbum] = useState("")
   // const [image, setImage] = useState("")
-  const [formData, setFormData] = useState({
+  const defaultFormData = {
+    artist:"",
     name: "",
-    album: "",
     image: "",
-  });
+    likes: 0
+  }
+  const [formData, setFormData] = useState(defaultFormData)
   
   const params = useParams()
   console.log(params)
@@ -31,17 +33,10 @@ function Form({ musics, setMusic, onAddMusic }) {
     }
   }
 
-  function handleChange(event) {
-    setFormData({
-      ...formData,
-      [event.target.name]: event.target.value,
-    });
-  }
-
   function handleSubmit() {
     const newMusic = {
+      artist: formData.artist,
       name: formData.name,
-      album: formData.album,
       image: formData.image,
     };
 
@@ -55,6 +50,18 @@ function Form({ musics, setMusic, onAddMusic }) {
     .then(response => response())
     .then(onAddMusic);
   }
+
+  function handleChange(e){
+    setFormData({...formData, [e.target.name]: e.target.value})
+  }
+
+  // useEffect(() => {
+  //   if(params.id) {
+  //     const musicWeWantToEdit = musics.find(music => music.id === parseInt(params.id))
+  //     setFormData(musicWeWantToEdit);
+  //   }
+
+  // }, [params])
 
   // function handleSubmit(e) {
   //   e.preventDefault();
@@ -75,30 +82,28 @@ function Form({ musics, setMusic, onAddMusic }) {
       <form className="add-music-form" onSubmit={handleSubmit} style={styles.form}>
         <h3>Add Music!</h3>
         <input
-          type="text"
-          name="name"
-          placeholder="Enter artist's name..."
-          className="input-text"
-          value={formData.name}
-          onChange={handleChange}
+            onChange={handleChange} 
+            fluid label="Artist" 
+            placeholder="Artist" 
+            name="artist" 
+            value={formData.artist} 
         />
         <br />
         <input
-          type="text"
-          name="name"
-          placeholder="Enter album name..."
-          className="input-text"
-          value={formData.album}
-          onChange={handleChange}
+          onChange={handleChange} 
+          fluid label="Album" 
+          placeholder="Album" 
+          name="Album" 
+          value={formData.name} 
         />
         <br />
         <input
+          onChange={handleChange}
           type="text"
           name="image"
           placeholder="Enter album art image URL..."
           className="input-text"
           value={formData.image}
-          onChange={handleChange}
         />
         <br />
         <input

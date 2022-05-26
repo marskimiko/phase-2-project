@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom'
 
-function Form({ musics, setMusic }) {
+function Form({ musics, setMusic, onAddMusic }) {
   // const [name, setName] = useState("")
   // const [album, setAlbum] = useState("")
   // const [image, setImage] = useState("")

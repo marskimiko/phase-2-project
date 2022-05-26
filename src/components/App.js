@@ -16,6 +16,10 @@ function App() {
     .then((allMusic) => setMusic(allMusic))
   }, []);
 
+  function handleAddMusic(newMusic) {
+    setMusic([...musics, newMusic]);
+  }
+
 
   return (
     <div>
@@ -25,6 +29,7 @@ function App() {
           <Form 
             musics={musics}
             setMusic={setMusic} 
+            onAddMusic={handleAddMusic}
           />
         </Route>
         <Route exact path="/about">

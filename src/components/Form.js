@@ -33,23 +33,6 @@ function Form({ onAddMusic, musics }) {
     }
   }
 
-  // function handleSubmit() {
-  //   const newMusic = {
-  //     artist: formData.artist,
-  //     name: formData.name,
-  //     image: formData.image,
-  //   };
-
-  //   fetch('http://localhost:3004/music', {
-  //     method: "POST",
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //     },
-  //     body: JSON.stringify(newMusic),
-  //   })
-  //   .then(response => response())
-  //   .then(onAddMusic);
-  // }
   function handleSubmit(e){
     e.preventDefault()
 
@@ -74,28 +57,13 @@ function Form({ onAddMusic, musics }) {
     setFormData({...formData, [e.target.name]: e.target.value})
   }
 
-  // useEffect(() => {
-  //   if(params.id) {
-  //     const musicWeWantToEdit = musics.find(music => music.id === parseInt(params.id))
-  //     setFormData(musicWeWantToEdit);
-  //   }
+  useEffect(() => {
+    if(params.id) {
+      const musicWeWantToEdit = musics.find(music => music.id === parseInt(params.id))
+      setFormData(musicWeWantToEdit);
+    }
 
-  // }, [params])
-
-  // function handleSubmit(e) {
-  //   e.preventDefault();
-  //   const formData = { name, album, image};
-
-  //   fetch('http://localhost:3004/music', {
-  //     method: "POST",
-  //     headers: {
-  //       "Content-Type": "application/json"
-  //     },
-  //     body: JSON.stringify(formData),
-  //   })
-  //   .then(r => r.json())
-  //   .then(newMusic => setMusic([...musics, newMusic]));
-  // }
+  }, [params])
 
   return (
     <div>

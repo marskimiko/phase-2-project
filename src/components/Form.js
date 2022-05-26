@@ -38,20 +38,38 @@ function Form({ musics, setMusic }) {
     });
   }
 
-  function handleSubmit(e) {
-    e.preventDefault();
-    const formData = { name, album, image};
+  function handleSubmit() {
+    const newMusic = {
+      name: formData.name,
+      album: formData.album,
+      image: formData.image,
+    };
 
     fetch('http://localhost:3004/music', {
       method: "POST",
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
       },
-      body: JSON.stringify(formData),
+      body: JSON.stringify(newMusic),
     })
-    .then(r => r.json())
-    .then(newMusic => setMusic([...musics, newMusic]));
+    .then(response => response())
+    .then(onAddMusic);
   }
+
+  // function handleSubmit(e) {
+  //   e.preventDefault();
+  //   const formData = { name, album, image};
+
+  //   fetch('http://localhost:3004/music', {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/json"
+  //     },
+  //     body: JSON.stringify(formData),
+  //   })
+  //   .then(r => r.json())
+  //   .then(newMusic => setMusic([...musics, newMusic]));
+  // }
   return (
     <div className="container">
       <form className="add-music-form" onSubmit={handleSubmit} style={styles.form}>

@@ -5,6 +5,11 @@ function Form({ musics, setMusic }) {
   // const [name, setName] = useState("")
   // const [album, setAlbum] = useState("")
   // const [image, setImage] = useState("")
+  const [formData, setFormData] = useState({
+    name: "",
+    album: "",
+    image: "",
+  });
   
   const params = useParams()
   console.log(params)
@@ -24,6 +29,13 @@ function Form({ musics, setMusic }) {
       alignItems: "center",
       justifyContent: "center"
     }
+  }
+
+  function handleChange(event) {
+    setFormData({
+      ...formData,
+      [event.target.name]: event.target.value,
+    });
   }
 
   function handleSubmit(e) {
@@ -49,8 +61,8 @@ function Form({ musics, setMusic }) {
           name="name"
           placeholder="Enter artist's name..."
           className="input-text"
-          value={name}
-          onChange={e => setName(e.target.value)}
+          value={formData.name}
+          onChange={handleChange}
         />
         <br />
         <input
@@ -58,8 +70,8 @@ function Form({ musics, setMusic }) {
           name="name"
           placeholder="Enter album name..."
           className="input-text"
-          value={album}
-          onChange={e => setAlbum(e.target.value)}
+          value={formData.album}
+          onChange={handleChange}
         />
         <br />
         <input
@@ -67,8 +79,8 @@ function Form({ musics, setMusic }) {
           name="image"
           placeholder="Enter album art image URL..."
           className="input-text"
-          value={image}
-          onChange={e => setImage(e.target.value)}
+          value={formData.image}
+          onChange={handleChange}
         />
         <br />
         <input

@@ -8,7 +8,7 @@ function Home({ musics, setMusic }) {
       display: "flex",
       flexDirection: "row",
       flexWrap: "wrap",
-      justifyContent: "center",
+      justifyContent: "space-evenly",
       alignItems: "center",
       alignContent: "center"
     }

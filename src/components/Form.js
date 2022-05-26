@@ -98,7 +98,7 @@ function Form({ onAddMusic, musics }) {
                 onChange={handleChange} 
               />
           </div>
-            <input 
+            <input
               type="submit" 
               value={formData.id ? "Update" : "Create"}
             />

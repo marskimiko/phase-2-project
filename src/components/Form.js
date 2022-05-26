@@ -33,23 +33,42 @@ function Form({ onAddMusic, musics }) {
     }
   }
 
-  function handleSubmit() {
-    const newMusic = {
-      artist: formData.artist,
-      name: formData.name,
-      image: formData.image,
-    };
+  // function handleSubmit() {
+  //   const newMusic = {
+  //     artist: formData.artist,
+  //     name: formData.name,
+  //     image: formData.image,
+  //   };
 
-    fetch('http://localhost:3004/music', {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(newMusic),
+  //   fetch('http://localhost:3004/music', {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //     body: JSON.stringify(newMusic),
+  //   })
+  //   .then(response => response())
+  //   .then(onAddMusic);
+  // }
+  function handleSubmit(e){
+    e.preventDefault()
+
+    const newMusic = {...formData, likes: 0}
+
+    const configObj = {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(newMusic)
+    }
+    fetch('http://localhost:3004/music', configObj)
+    .then(r => r.json())
+    .then(data => {
+        onAddMusic(data)
+        setFormData(defaultFormData)
     })
-    .then(response => response())
-    .then(onAddMusic);
-  }
+}
 
   function handleChange(e){
     setFormData({...formData, [e.target.name]: e.target.value})
@@ -77,44 +96,27 @@ function Form({ onAddMusic, musics }) {
   //   .then(r => r.json())
   //   .then(newMusic => setMusic([...musics, newMusic]));
   // }
+
   return (
-    <div className="container">
-      <form className="add-music-form" onSubmit={handleSubmit} style={styles.form}>
-        <h3>Add Music!</h3>
-        <input
-            onChange={handleChange} 
-            fluid label="Artist" 
-            placeholder="Artist" 
-            name="artist" 
-            value={formData.artist} 
-        />
-        <br />
-        <input
-          onChange={handleChange} 
-          fluid label="Album" 
-          placeholder="Album" 
-          name="Album" 
-          value={formData.name} 
-        />
-        <br />
-        <input
-          onChange={handleChange}
-          type="text"
-          name="image"
-          placeholder="Enter album art image URL..."
-          className="input-text"
-          value={formData.image}
-        />
-        <br />
-        <input
-          type="submit"
-          name="submit"
-          value="Add"
-          className="submit"
-        />
-      </form>
+    <div>
+        <h2>Add a New Song</h2>
+       <form onSubmit={handleSubmit} style={styles.form}>
+       <div>
+            <label>Artist:</label>
+            <input type="text" name="artist" value={formData.artist} onChange={handleChange} />
+           </div>
+           <div>
+            <label>Name:</label>
+            <input type="text" name="name" value={formData.name} onChange={handleChange} />
+           </div>
+           <div>
+            <label>Image:</label>
+            <input type="text" name="image" value={formData.image} onChange={handleChange} />
+           </div>
+            <input type="submit" value={formData.id ? "Update" : "Create"}/>
+       </form>
     </div>
-  )
+)
 }
 
 export default Form;

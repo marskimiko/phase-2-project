@@ -1,8 +1,9 @@
 import React from "react";
 import { Button, Card } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Link } from "react-router-dom";
 
-function MusicCard({ music, onUpdateMusic, handleDelete }) {
+function MusicCard({ music, updateMusic, handleDelete }) {
   const {  id, artist, name, image, likes } = music;
   
   const styles = {
@@ -28,20 +29,20 @@ function MusicCard({ music, onUpdateMusic, handleDelete }) {
     }
   }
 
-  function handleLikeClick() {
-    const updateObj = {
-      likes: likes + 1,
-    }
 
+  function handleLikeClick() {
+    
     fetch(`http://localhost:3004/music/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(updateObj)
+      body: JSON.stringify({likes: likes + 1})
     })
       .then((r) => r.json())  
-      .then(onUpdateMusic);
+      .then(data => {
+        updateMusic(data);
+      })
   }
 
   function onHandleClickDelete() {
@@ -80,6 +81,7 @@ function MusicCard({ music, onUpdateMusic, handleDelete }) {
             onClick={onHandleClickDelete}
             >🗑
           </Button>
+          <Link to={`/${id}/edit`}><button>EDIT</button></Link>
         </div>
       </div>
     </Card>

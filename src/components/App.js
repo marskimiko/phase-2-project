@@ -4,29 +4,17 @@ import { Route, Switch } from "react-router-dom";
 import Home from './Home'
 import NavBar from "./NavBar";
 import Form from './Form';
+import About from './About'
 // import { Form } from "react-bootstrap";
 
 function App() {
   const [musics, setMusic] = useState([]);
-
-  const styles = {
-    center: {
-      textAlign: "center"
-    }
-  }
 
   useEffect(() => {
     fetch("http://localhost:3004/music")
     .then(r => r.json())
     .then((allMusic) => setMusic(allMusic))
   }, []);
-
-  function handleUpdateMusic(updatedMusic) {
-    const updatedMusics = musics.map((music) =>
-      music.id === updatedMusic.id ? updatedMusic : music
-    );
-    setMusic(updatedMusics);
-  }
 
 
   return (
@@ -39,11 +27,16 @@ function App() {
             setMusic={setMusic} 
           />
         </Route>
+        <Route exact path="/about">
+          <About />
+        </Route>
+        <Route exact path="/:id/edit">
+          <Form />
+        </Route>
         <Route exact path="/">
           <Home 
             musics={musics}
             setMusic={setMusic}
-            onUpdateMusic={handleUpdateMusic}
           />
         </Route>
       </Switch>

@@ -1,8 +1,7 @@
 import React from "react";
-import { Route } from "react-router-dom";
 import MusicCard from './MusicCard'
 
-function Home({ musics, setMusic, onUpdateMusic }) {
+function Home({ musics, setMusic }) {
 
   const styles = {
     main: {
@@ -13,9 +12,16 @@ function Home({ musics, setMusic, onUpdateMusic }) {
       alignItems: "center",
       alignContent: "center"
     }
-  } 
+  }
+  
+  function updateMusic(updatedMusic) {
+    const updatedMusics = musics.map((music) =>
+      music.id === updatedMusic.id ? updatedMusic : music
+    );
+    setMusic(updatedMusics);
+  }
 
-  const handleDelete= (id) => {
+  const handleDelete = (id) => {
     let updatedMusics = musics.filter(music => music.id !== id)
     setMusic(updatedMusics)
     const config = {
@@ -28,7 +34,7 @@ function Home({ musics, setMusic, onUpdateMusic }) {
     return <MusicCard
       key={music.id}
       music={music}
-      onUpdateMusic={onUpdateMusic}
+      updateMusic={updateMusic}
       handleDelete={handleDelete}
     />
   })

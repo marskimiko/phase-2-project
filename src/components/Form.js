@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
+import { useParams } from 'react-router-dom'
 
 function Form({ musics, setMusic }) {
-  const [name, setName] = useState("")
-  const [album, setAlbum] = useState("")
-  const [image, setImage] = useState("")
+  // const [name, setName] = useState("")
+  // const [album, setAlbum] = useState("")
+  // const [image, setImage] = useState("")
+  
+  const params = useParams()
+  console.log(params)
 
   const styles = {
     img: {

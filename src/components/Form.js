@@ -56,7 +56,6 @@ function Form({ onAddMusic, musics, updateMusic }) {
 
   function handleSubmitUpdate(e) {
     e.preventDefault()
-    console.log('update')
 
     fetch(`http://localhost:3004/music/${params.id}`, {
       method: "PATCH",
@@ -67,7 +66,7 @@ function Form({ onAddMusic, musics, updateMusic }) {
     })
     .then(r => r.json())
     .then(data => {
-      updateMusic(data)
+      updateMusic(data);
     })
   }
 

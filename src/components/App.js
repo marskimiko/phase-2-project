@@ -20,11 +20,22 @@ function App() {
     setMusic([...musics, newMusic]);
   }
 
+  // function updateMusic(updatedMusic) {
+  //   const updatedMusics = musics.map((music) =>
+  //     music.id === updatedMusic.id ? updatedMusic : music
+  //   );
+  //   setMusic(updatedMusics);
+  // }
+
   function updateMusic(updatedMusic) {
-    const updatedMusics = musics.map((music) =>
-      music.id === updatedMusic.id ? updatedMusic : music
-    );
-    setMusic(updatedMusics);
+    const updatedMusicArray = musics.map((music) => {
+      if (music.id === updatedMusic.id) {
+        return updatedMusic;
+      } else {
+        return music;
+      }
+    });
+    setMusic(updatedMusicArray);
   }
 
 

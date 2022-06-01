@@ -12,6 +12,7 @@ function Form({ onAddMusic, musics, updateMusic }) {
     likes: 0
   }
   const [formData, setFormData] = useState(defaultFormData)
+  console.log(formData)
   
   const params = useParams()
   const history = useHistory()
@@ -62,11 +63,11 @@ function Form({ onAddMusic, musics, updateMusic }) {
       headers: {
         "Content-Type" : "application/json",
       },
-      body: JSON.stringify(formData)
+      body: JSON.stringify(formData),
     })
     .then(r => r.json())
     .then(data => {
-      updateMusic(data);
+      updateMusic({...formData, data});
     })
   }
 

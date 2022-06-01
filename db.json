@@ -2,11 +2,10 @@
   "music": [
     {
       "id": 1,
-      "artist": "KIMIKO, wwwww",
+      "artist": "KIMIKO,wwww",
       "name": "XING",
       "image": "https://f4.bcbits.com/img/a3509240382_10.jpg",
-      "likes": 7,
-      "descriptiion": "Produced mixed and mastered by KIMIKO (Marisa Kimiko Saunders) Album art by Karen Nicole"
+      "likes": 5
     },
     {
       "id": 2,
@@ -14,7 +13,15 @@
       "name": "5am",
       "image": "https://f4.bcbits.com/img/a2357319437_10.jpg",
       "likes": 4,
-      "descriptiion": "Kelz’s debut ‘5am and I Can’t Sleep’ delivers us a frothy dream-pop introduction to the mind of Vietnamese-American producer and multi-instrumentalist Kelly Truong. Written and recorded in the middle of the night in her Orange County, California home, these songs tell a nostalgic yet hopeful story following loss. For kelz, carefully looping beats, tinkering with synthetic waveforms, and interweaving guitar picking serves as a meditation--a mode of processing emotions and the inevitable passing of time. Front and center are her airy vocals, recorded in a whisper so as to not wake people in the other room. Each song folds in on itself like a wave’s undertow, reorienting infectious melodies from tracks previous. When asked about the tracks, kelz reflects on the process as “feeling like running towards something” but not knowing what it is. Escape with kelz on a long night drive with this effervescent electro-pop debut."
+      "descriptiion": "Kelz’s debut ‘5am and I Can’t Sleep’ delivers us a frothy dream-pop introduction to the mind of Vietnamese-American producer and multi-instrumentalist Kelly Truong. Written and recorded in the middle of the night in her Orange County, California home, these songs tell a nostalgic yet hopeful story following loss. For kelz, carefully looping beats, tinkering with synthetic waveforms, and interweaving guitar picking serves as a meditation--a mode of processing emotions and the inevitable passing of time. Front and center are her airy vocals, recorded in a whisper so as to not wake people in the other room. Each song folds in on itself like a wave’s undertow, reorienting infectious melodies from tracks previous. When asked about the tracks, kelz reflects on the process as “feeling like running towards something” but not knowing what it is. Escape with kelz on a long night drive with this effervescent electro-pop debut.",
+      "defaultFormData": {
+        "id": 2,
+        "artist": "Kelz, party",
+        "name": "5am",
+        "image": "https://f4.bcbits.com/img/a2357319437_10.jpg",
+        "likes": 4,
+        "descriptiion": "Kelz’s debut ‘5am and I Can’t Sleep’ delivers us a frothy dream-pop introduction to the mind of Vietnamese-American producer and multi-instrumentalist Kelly Truong. Written and recorded in the middle of the night in her Orange County, California home, these songs tell a nostalgic yet hopeful story following loss. For kelz, carefully looping beats, tinkering with synthetic waveforms, and interweaving guitar picking serves as a meditation--a mode of processing emotions and the inevitable passing of time. Front and center are her airy vocals, recorded in a whisper so as to not wake people in the other room. Each song folds in on itself like a wave’s undertow, reorienting infectious melodies from tracks previous. When asked about the tracks, kelz reflects on the process as “feeling like running towards something” but not knowing what it is. Escape with kelz on a long night drive with this effervescent electro-pop debut."
+      }
     },
     {
       "id": 3,

@@ -27,15 +27,26 @@ function App() {
   //   setMusic(updatedMusics);
   // }
 
-  function updateMusic(updatedMusic) {
-    const updatedMusicArray = musics.map((music) => {
+  // function updateMusic(updatedMusic) {
+  //   const updatedMusicArray = musics.map((music) => {
+  //     if (music.id === updatedMusic.id) {
+  //       return updatedMusic;
+  //     } else {
+  //       return music;
+  //     }
+  //   });
+  //   setMusic(updatedMusicArray);
+  // }
+
+  const updateMusic = (updatedMusic) => {
+    const newMusicArray = musics.map((music) => {
       if (music.id === updatedMusic.id) {
         return updatedMusic;
       } else {
         return music;
       }
     });
-    setMusic(updatedMusicArray);
+    setMusic(newMusicArray);
   }
 
 

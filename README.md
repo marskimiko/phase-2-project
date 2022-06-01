@@ -6,23 +6,37 @@ https://github.com/marskimiko/studioghibli-app
 
 ## Project Philosophy:
 
-This project was made with the intention of providing a space where you can easily access all of the different Studio Ghibli Films and information about.
+This project was made as a database for me to store music that I have worked on as an audio engineer in once place, as well as to add more music as I am involved in more projects in the future. I was inspired to make this project as an audio engineer in can be hard to keep track of all of the different projects that I have worked on over the year and thought this would be able to create something that I can easily continue to add to as time goes on. 
 
-I was inspired to make this application as a lover Hayao Miyazaki's films and the fact that he is about to release his last film and it was imporant to me to to have a place to go where I read more about them. 
 
 ## Features: 
 
-- Displays a list of all Studio Ghibli films
-- Provides description, release date, run time, and rotten tomato score for each film
-- Can add films that may not be listed
+- The home page displays all of the music projects that I have worked on over the years 
+- On the home page you have the ability to like the albums, delete them from the broser, as well as edit the information displayed about them on the page
+- Upon clicking on the "edit" button the user will be taken to a form where they can edit information, and then click the "update" button which will automatically link them back to the home page where they can see the changes they made displayed in the browerser
+- In the nav bar you can click on the "Add Music" button to add more projects to the home page. Upon clicking you will automatically be taken to a form where you can enter information about the project you are adding. Click on the create button to automatically be linked to the home page and see the new project in the browser. These projects can also be liked, deleted, and edited as desired
+- You can also click the about button in the nav bar to be liked to the about page providing information about the developer as well as a link to more projects that they have worked on
 
 ## Description of app: 
 
-This application is a database of Studio Ghibli Films. It uses a public API of a list of Studio Ghibli films to fetch the data : https://ghibliapi.herokuapp.com/films
+This is a single page application that is a database of Music projects that Marisa Kimiko Saunders has worked on over the years. It uses a public JSON server to store the data which is then fetched : http://localhost:3004/music
 
-The event listeners used in this application are DOMContentLoaded two click events, as well as a submit event. 
+The application uses a total of 6 components: App.js, Home.js, MusicCard.js, Form.js, NavBar.js, and Aout.js
 
-Upon clicking on the film the page then loads the name of the film, its description, date of release and rotten tomato score. In order to return to the full list of films you can click on the "All Films" button at the top of the page. You can also add a film to the list if there is anything missing by clicking the "Add Missing Film!" button which triggers a form to appear on the page where you can enter the missing information.
+The application has 5 different client-side routes throughout it using React Router: Home, Add, Edit, and About
+
+The application uses GET, POST, PATCH, and DELETE requests in the code.
+
+The GET request is used to fetch the data from the db.json file using the JSON server to display the different projects in the browser. 
+
+The POST request is used in the form in order to add more projects to the home page. The
+
+Two PATCH requests are used in the like feature to add more likes, as well as the update feautre to edit the projects on the home page.
+
+The DELETE request is used to delete projects from the home page. 
+
+Styling was done with css using both styled components and a CSS file, as well as Bootstrap.
+
 
 ## How to Use:
 
@@ -30,24 +44,29 @@ Upon clicking on the film the page then loads the name of the film, its descript
 
 ![Alt Text](gifs/gif1_phase2.gif)
 
-**Step 2:** Click on the "All Films" button to return to the full list of films
+**•** Once you've entered the information click the update button to see the changes populated in the browser
 
 ![Alt Text](gifs/gif2_phase2.gif)
 
-**Step 3:** If you think that there is a missing film from the list click on the "Add a missing film!" button and a form where you can submit the film will appear
+**•** Click the "Add Music" button to add more albums, once youve entered the information click the create button to see the new album in the browser, once again you can click the heart to add more likes
 
 ![Alt Text](gifs/gif3_phase2.gif)
 
-**Step 4:** Once you have entered a film name click the "Add Film" button and a fill will be added to the list
+**•** Click the "About" button to see a description about the developer as well as a link to more of there projects
 
 ![Alt Text](gifs/gif4_phase2.gif)
 
 ## Technologies used:
 
-- Vanilla JavaScript
+- React
+- Javascript
 - HTML
 - CSS
-- Ghibli api
+- Bootstrap
+- JSON server
+- React Router
+- Create-react-app
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

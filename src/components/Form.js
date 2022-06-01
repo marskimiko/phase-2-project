@@ -52,7 +52,24 @@ function Form({ onAddMusic, musics }) {
         setFormData(defaultFormData)
         history.push(`/`)
     })
-}
+  }
+
+  function handleSubmitUpdate(id, e) {
+    e.preventDefault()
+    console.log('update')
+
+    fetch(`http://localhost:3004/music/${id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type" : "application/json",
+      },
+      body: JSON.stringify(formData)
+    })
+    .then(r => r.json())
+    .then(data => {
+      setFormData(formData)
+    })
+  }
 
   function handleChange(e){
     setFormData({...formData, [e.target.name]: e.target.value})
@@ -71,7 +88,7 @@ function Form({ onAddMusic, musics }) {
   return (
     <div>
         <h2 style={styles.form}>Add a New Song</h2>
-        <form class="form-inline"onSubmit={handleSubmitCreate} style={styles.form}>
+        <form class="form-inline" onSubmit={handleSubmitCreate} style={styles.form}>
           <div>
             <label>Artist:</label>
             <input 

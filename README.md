@@ -1,3 +1,53 @@
+# Studio Ghibli-App
+
+## Repository URL
+
+https://github.com/marskimiko/studioghibli-app
+
+## Project Philosophy:
+
+This project was made with the intention of providing a space where you can easily access all of the different Studio Ghibli Films and information about.
+
+I was inspired to make this application as a lover Hayao Miyazaki's films and the fact that he is about to release his last film and it was imporant to me to to have a place to go where I read more about them. 
+
+## Features: 
+
+- Displays a list of all Studio Ghibli films
+- Provides description, release date, run time, and rotten tomato score for each film
+- Can add films that may not be listed
+
+## Description of app: 
+
+This application is a database of Studio Ghibli Films. It uses a public API of a list of Studio Ghibli films to fetch the data : https://ghibliapi.herokuapp.com/films
+
+The event listeners used in this application are DOMContentLoaded two click events, as well as a submit event. 
+
+Upon clicking on the film the page then loads the name of the film, its description, date of release and rotten tomato score. In order to return to the full list of films you can click on the "All Films" button at the top of the page. You can also add a film to the list if there is anything missing by clicking the "Add Missing Film!" button which triggers a form to appear on the page where you can enter the missing information.
+
+## How to Use:
+
+**•** Click on a the heart to add more likes and click the edit button to enter information about the album of your choice
+
+![Alt Text](gifs/gif1_phase2.gif)
+
+**Step 2:** Click on the "All Films" button to return to the full list of films
+
+![Alt Text](gifs/gif2_phase2.gif)
+
+**Step 3:** If you think that there is a missing film from the list click on the "Add a missing film!" button and a form where you can submit the film will appear
+
+![Alt Text](gifs/gif3_phase2.gif)
+
+**Step 4:** Once you have entered a film name click the "Add Film" button and a fill will be added to the list
+
+![Alt Text](gifs/gif4_phase2.gif)
+
+## Technologies used:
+
+- Vanilla JavaScript
+- HTML
+- CSS
+- Ghibli api
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

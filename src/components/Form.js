@@ -54,45 +54,36 @@ function Form({ onAddMusic, musics }) {
     })
   }
 
-  function handleSubmitUpdate(id, e) {
+  function handleSubmitUpdate(e) {
     e.preventDefault()
     console.log('update')
 
-    // fetch(`http://localhost:3004/music/${id}`, {
-    //   method: "PATCH",
-    //   headers: {
-    //     "Content-Type" : "application/json",
-    //   },
-    //   body: JSON.stringify(formData)
-    // })
-    // .then(r => r.json())
-    // .then(data => {
-    //   setFormData(data)
-    // })
-    useEffect(() => {
-      if(params.id && musics.length > 0) {
-        const musicWeWantToEdit = musics.find(music => music.id === parseInt(params.id))
-        setFormData(musicWeWantToEdit);
-      } else {
-        setFormData(defaultFormData);
-      }
-  
-    }, [params, musics])
+    fetch(`http://localhost:3004/music/${id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type" : "application/json",
+      },
+      body: JSON.stringify(formData)
+    })
+    .then(r => r.json())
+    .then(data => {
+      setFormData(data)
+    })
   }
 
   function handleChange(e){
     setFormData({...formData, [e.target.name]: e.target.value})
   }
 
-  // useEffect(() => {
-  //   if(params.id && musics.length > 0) {
-  //     const musicWeWantToEdit = musics.find(music => music.id === parseInt(params.id))
-  //     setFormData(musicWeWantToEdit);
-  //   } else {
-  //     setFormData(defaultFormData);
-  //   }
+  useEffect(() => {
+    if(params.id && musics.length > 0) {
+      const musicWeWantToEdit = musics.find(music => music.id === parseInt(params.id))
+      setFormData(musicWeWantToEdit);
+    } else {
+      setFormData(defaultFormData);
+    }
 
-  // }, [params, musics])
+  }, [params, musics])
 
   return (
     <div>

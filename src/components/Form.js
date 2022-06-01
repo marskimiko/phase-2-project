@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useHistory } from 'react-router-dom'
 
-function Form({ onAddMusic, musics, updateMusic }) {
+function Form({ updateMusic, onAddMusic, musics }) {
   // const [name, setName] = useState("")
   // const [album, setAlbum] = useState("")
   // const [image, setImage] = useState("")
@@ -12,7 +12,6 @@ function Form({ onAddMusic, musics, updateMusic }) {
     likes: 0
   }
   const [formData, setFormData] = useState(defaultFormData)
-  console.log(formData)
   
   const params = useParams()
   const history = useHistory()
@@ -61,13 +60,14 @@ function Form({ onAddMusic, musics, updateMusic }) {
     fetch(`http://localhost:3004/music/${params.id}`, {
       method: "PATCH",
       headers: {
-        "Content-Type" : "application/json",
+        "Content-Type": "application/json",
       },
       body: JSON.stringify(formData),
     })
-    .then(r => r.json())
+    .then((r) => r.json())
     .then(data => {
-      updateMusic({...formData, data});
+      updateMusic(data);
+      history.push(`/`)
     })
   }
 

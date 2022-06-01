@@ -2,10 +2,17 @@
   "music": [
     {
       "id": 1,
-      "artist": "KIMIKO,wwww",
+      "artist": "KIMIKO",
       "name": "XING",
       "image": "https://f4.bcbits.com/img/a3509240382_10.jpg",
-      "likes": 5
+      "likes": 5,
+      "data": {
+        "id": 1,
+        "artist": "KIMIKO, www",
+        "name": "XING",
+        "image": "https://f4.bcbits.com/img/a3509240382_10.jpg",
+        "likes": 5
+      }
     },
     {
       "id": 2,

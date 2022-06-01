@@ -81,7 +81,7 @@ function MusicCard({ music, updateMusic, handleDelete }) {
             onClick={onHandleClickDelete}
             >🗑
           </Button>
-          <Link to={`/${id}/edit`}><button>EDIT</button></Link>
+          <Link to={`/${id}/edit`}><button style={styles.trashButton}>EDIT</button></Link>
         </div>
       </div>
     </Card>

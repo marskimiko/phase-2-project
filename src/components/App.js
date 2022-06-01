@@ -27,27 +27,27 @@ function App() {
   //   setMusic(updatedMusics);
   // }
 
-  // function updateMusic(updatedMusic) {
-  //   const updatedMusicArray = musics.map((music) => {
-  //     if (music.id === updatedMusic.id) {
-  //       return updatedMusic;
-  //     } else {
-  //       return music;
-  //     }
-  //   });
-  //   setMusic(updatedMusicArray);
-  // }
-
-  const updateMusic = (updatedMusic) => {
-    const newMusicArray = musics.map((music) => {
+  function updateMusic(updatedMusic) {
+    const updatedMusicArray = musics.map((music) => {
       if (music.id === updatedMusic.id) {
         return updatedMusic;
       } else {
         return music;
       }
     });
-    setMusic(newMusicArray);
+    setMusic(updatedMusicArray);
   }
+
+  // const updateMusic = (updatedMusic) => {
+  //   const newMusicArray = musics.map((music) => {
+  //     if (music.id === updatedMusic.id) {
+  //       return updatedMusic;
+  //     } else {
+  //       return music;
+  //     }
+  //   });
+  //   setMusic(newMusicArray);
+  // }
 
 
   return (
@@ -65,7 +65,10 @@ function App() {
           <About />
         </Route>
         <Route exact path="/:id/edit">
-          <Form musics={musics}/>
+          <Form 
+          musics={musics}
+          updateMusic={updateMusic}
+          />
         </Route>
         <Route exact path="/">
           <Home 

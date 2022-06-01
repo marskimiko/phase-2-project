@@ -5,6 +5,8 @@ function Home({ musics, setMusic, updateMusic }) {
 
   const styles = {
     main: {
+      paddingTop: "100px",
+      paddingBottom: "100px",
       display: "flex",
       flexDirection: "row",
       flexWrap: "wrap",

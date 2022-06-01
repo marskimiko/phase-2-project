@@ -58,7 +58,7 @@ function Form({ onAddMusic, musics }) {
     e.preventDefault()
     console.log('update')
 
-    fetch(`http://localhost:3004/music/${id}`, {
+    fetch(`http://localhost:3004/music/${params.id}`, {
       method: "PATCH",
       headers: {
         "Content-Type" : "application/json",
@@ -88,7 +88,7 @@ function Form({ onAddMusic, musics }) {
   return (
     <div>
         <h2 style={styles.form}>Add a New Song</h2>
-        <form class="form-inline" onSubmit={handleSubmitUpdate} style={styles.form}>
+        <form class="form-inline" onSubmit={params.id ? handleSubmitUpdate : handleSubmitCreate} style={styles.form}>
           <div>
             <label>Artist:</label>
             <input 

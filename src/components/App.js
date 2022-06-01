@@ -25,12 +25,12 @@ function App() {
     <div>
       <NavBar />
       <Switch>
-      <Route exact path="/add">
+      {/* <Route exact path="/add">
           <Form 
             setMusic={setMusic} 
             onAddMusic={handleAddMusic}
           />
-        </Route>
+        </Route> */}
         <Route exact path="/about">
           <About />
         </Route>

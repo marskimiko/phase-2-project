@@ -36,6 +36,7 @@ function App() {
           <Form 
             setMusic={setMusic} 
             onAddMusic={handleAddMusic}
+            updateMusic={updateMusic}
           />
         </Route>
         <Route exact path="/about">

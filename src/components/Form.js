@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useHistory } from 'react-router-dom'
 
-function Form({ onAddMusic, musics }) {
+function Form({ onAddMusic, musics, updateMusic }) {
   // const [name, setName] = useState("")
   // const [album, setAlbum] = useState("")
   // const [image, setImage] = useState("")
@@ -67,7 +67,7 @@ function Form({ onAddMusic, musics }) {
     })
     .then(r => r.json())
     .then(data => {
-      setFormData(data)
+      updateMusic(data)
     })
   }
 

@@ -1,7 +1,7 @@
 import React from "react";
 import MusicCard from './MusicCard'
 
-function Home({ musics, setMusic }) {
+function Home({ musics, setMusic, updateMusic }) {
 
   const styles = {
     main: {
@@ -14,12 +14,12 @@ function Home({ musics, setMusic }) {
     }
   }
   
-  function updateMusic(updatedMusic) {
-    const updatedMusics = musics.map((music) =>
-      music.id === updatedMusic.id ? updatedMusic : music
-    );
-    setMusic(updatedMusics);
-  }
+  // function updateMusic(updatedMusic) {
+  //   const updatedMusics = musics.map((music) =>
+  //     music.id === updatedMusic.id ? updatedMusic : music
+  //   );
+  //   setMusic(updatedMusics);
+  // }
 
   const handleDelete = (id) => {
     let updatedMusics = musics.filter(music => music.id !== id)

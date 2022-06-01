@@ -20,17 +20,24 @@ function App() {
     setMusic([...musics, newMusic]);
   }
 
+  function updateMusic(updatedMusic) {
+    const updatedMusics = musics.map((music) =>
+      music.id === updatedMusic.id ? updatedMusic : music
+    );
+    setMusic(updatedMusics);
+  }
+
 
   return (
     <div>
       <NavBar />
       <Switch>
-      {/* <Route exact path="/add">
+      <Route exact path="/add">
           <Form 
             setMusic={setMusic} 
             onAddMusic={handleAddMusic}
           />
-        </Route> */}
+        </Route>
         <Route exact path="/about">
           <About />
         </Route>
@@ -41,6 +48,7 @@ function App() {
           <Home 
             musics={musics}
             setMusic={setMusic}
+            updateMusic={updateMusic}
           />
         </Route>
       </Switch>

@@ -67,7 +67,7 @@ function Form({ onAddMusic, musics }) {
     })
     .then(r => r.json())
     .then(data => {
-      setFormData(formData)
+      setFormData(data)
     })
   }
 
@@ -88,7 +88,7 @@ function Form({ onAddMusic, musics }) {
   return (
     <div>
         <h2 style={styles.form}>Add a New Song</h2>
-        <form class="form-inline" onSubmit={handleSubmitCreate} style={styles.form}>
+        <form class="form-inline" onSubmit={handleSubmitUpdate} style={styles.form}>
           <div>
             <label>Artist:</label>
             <input 

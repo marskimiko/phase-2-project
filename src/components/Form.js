@@ -33,7 +33,7 @@ function Form({ onAddMusic, musics }) {
     }
   }
 
-  function handleCreateSubmit(e){
+  function handleSubmitCreate(e){
     e.preventDefault()
 
     const newMusic = {...formData, likes: 0}
@@ -71,7 +71,7 @@ function Form({ onAddMusic, musics }) {
   return (
     <div>
         <h2 style={styles.form}>Add a New Song</h2>
-        <form class="form-inline"onSubmit={handleCreateSubmit} style={styles.form}>
+        <form class="form-inline"onSubmit={handleSubmitCreate} style={styles.form}>
           <div>
             <label>Artist:</label>
             <input 

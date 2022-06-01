@@ -14,8 +14,6 @@ function Form({ onAddMusic, musics }) {
   const [formData, setFormData] = useState(defaultFormData)
   
   const params = useParams()
-  console.log(params)
-
   const history = useHistory()
 
   const styles = {

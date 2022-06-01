@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom'
+import { useParams, useHistory } from 'react-router-dom'
 
 function Form({ onAddMusic, musics }) {
   // const [name, setName] = useState("")
@@ -15,6 +15,8 @@ function Form({ onAddMusic, musics }) {
   
   const params = useParams()
   console.log(params)
+
+  const history = useHistory()
 
   const styles = {
     img: {
@@ -50,6 +52,7 @@ function Form({ onAddMusic, musics }) {
     .then(data => {
         onAddMusic(data)
         setFormData(defaultFormData)
+        history.push(`/`)
     })
 }
 

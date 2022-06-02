@@ -16,13 +16,6 @@ function Home({ musics, setMusic, updateMusic }) {
     }
   }
   
-  // function updateMusic(updatedMusic) {
-  //   const updatedMusics = musics.map((music) =>
-  //     music.id === updatedMusic.id ? updatedMusic : music
-  //   );
-  //   setMusic(updatedMusics);
-  // }
-
   const handleDelete = (id) => {
     let updatedMusics = musics.filter(music => music.id !== id)
     setMusic(updatedMusics)

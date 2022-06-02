@@ -42,19 +42,25 @@ Styling was done with css using both styled components and a CSS file, as well a
 
 **•** Click on a the heart to add more likes and click the edit button to enter information about the album of your choice
 
-![Alt Text](gifs/gif1_phase2.gif)
+![Alt Text](gifs/gif1.gif)
 
 **•** Once you've entered the information click the update button to see the changes populated in the browser
 
-![Alt Text](gifs/gif2_phase2.gif)
+![Alt Text](gifs/gif2.gif)
 
 **•** Click the "Add Music" button to add more albums, once youve entered the information click the create button to see the new album in the browser, once again you can click the heart to add more likes
 
-![Alt Text](gifs/gif3_phase2.gif)
+![Alt Text](gifs/gif3.gif)
 
 **•** Click the "About" button to see a description about the developer as well as a link to more of there projects
 
-![Alt Text](gifs/gif4_phase2.gif)
+![Alt Text](gifs/gif4.gif)
+
+![Alt Text](gifs/gif5.gif)
+
+![Alt Text](gifs/gif6.gif)
+
+![Alt Text](gifs/gif7.gif)
 
 ## Technologies used:
 

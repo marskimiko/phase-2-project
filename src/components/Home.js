@@ -15,16 +15,7 @@ function Home({ musics, setMusic, updateMusic }) {
       alignContent: "center"
     }
   }
-  
-  // const handleDelete = (id) => {
-  //   let updatedMusics = musics.filter(music => music.id !== id)
-  //   setMusic(updatedMusics)
-  //   const config = {
-  //     method: "DELETE",
-  //   }
-  //   fetch(`http://localhost:3004/music/${id}`, config)
-  // }
-  
+    
   const renderMusicArray = musics.map((music) => {
     return <MusicCard
       key={music.id}

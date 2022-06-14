@@ -3,7 +3,7 @@ import { Button, Card } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from "react-router-dom";
 
-function MusicCard({ music, updateMusic, handleDelete }) {
+function MusicCard({ music, setMusic, updateMusic, musics }) {
   const {  id, artist, name, image, likes } = music;
   
   const styles = {
@@ -43,6 +43,15 @@ function MusicCard({ music, updateMusic, handleDelete }) {
       .then(data => {
         updateMusic(data);
       })
+  }
+
+  const handleDelete = (id) => {
+    let updatedMusics = musics.filter(music => music.id !== id)
+    setMusic(updatedMusics)
+    const config = {
+      method: "DELETE",
+    }
+    fetch(`http://localhost:3004/music/${id}`, config)
   }
 
   function onHandleClickDelete() {

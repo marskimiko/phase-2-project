@@ -2,9 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams, useHistory } from 'react-router-dom'
 
 function Form({ updateMusic, onAddMusic, musics }) {
-  // const [name, setName] = useState("")
-  // const [album, setAlbum] = useState("")
-  // const [image, setImage] = useState("")
+
   const defaultFormData = {
     artist:"",
     name: "",
@@ -27,7 +25,6 @@ function Form({ updateMusic, onAddMusic, musics }) {
       margin: "50px auto",
       padding: "0px",
       borderSize: "border box",
-      // display: "flex",
       alignItems: "center",
       justifyContent: "center"
     }

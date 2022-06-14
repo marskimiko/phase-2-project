@@ -54,9 +54,6 @@ function MusicCard({ music, setMusic, updateMusic, musics }) {
     fetch(`http://localhost:3004/music/${id}`, config)
   }
 
-  function onHandleClickDelete() {
-    handleDelete(music.id)
-  }
 
   return (
     <Card>
@@ -87,7 +84,7 @@ function MusicCard({ music, setMusic, updateMusic, musics }) {
           </Button>
           <Button 
             style={styles.trashButton}
-            onClick={onHandleClickDelete}
+            onClick={() => handleDelete(music.id)}
             >🗑
           </Button>
           <Link to={`/${id}/edit`}><button style={styles.trashButton}>EDIT</button></Link>

@@ -86,6 +86,13 @@ Styling was done with css using both styled components and a CSS file, as well a
 
 ## Usage
 
+# Installation
+
+1. Fork and clone the repository
+2. Cd into the project and run npm install
+3. Run the json-server with: npm run server
+4. Run the React server with: npm start
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

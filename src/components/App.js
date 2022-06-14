@@ -31,8 +31,6 @@ function App() {
     setMusic(updatedMusicArray);
   }
 
-
-
   return (
     <div>
       <NavBar />

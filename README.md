@@ -2,7 +2,11 @@
 
 ## Repository URL
 
-https://github.com/marskimiko/studioghibli-app
+https://github.com/marskimiko/phase-2-project
+
+## Video Explination
+
+https://www.youtube.com/watch?v=X0yrzqCy7Wk
 
 ## Project Philosophy:
 
